@@ -5,7 +5,7 @@ How to spin up a basic yet beautiful and extensible website on any IaaS (like AW
 And although the resulting website can definitely stand on it's own, it's really intended to act as an origin for an Akamai CDN config which we'll be walking through setting up in a future post.
 
 ## WHY
-Akamai is incredible at deliverying and securing most of the world's most trafficked and targeted web applications but it's not always as great at making it as frictionless as it can for people to learn about, demo and experiment with Akamai solutions.
+Akamai is incredible at deliverying and securing the world's most trafficked and targeted web applications but it's not always so great at making it as frictionless as possible for people to learn about, demo and experiment with Akamai solutions.  Although this has defintely been improving, I still saw a need for some Hello World style jumping off points to facilitate the adoption of Akamai solutions.
 
 This is why I started HelloWorld.ByAkamai.com, to try to make it as easy as I can for anyone (like customers, fellow SEs, curious web devs, interviewees, etc.) to try out Akamai solutions.
 
