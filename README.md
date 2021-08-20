@@ -1,36 +1,47 @@
-# From a Ubuntu 20.04 to Awesome Website in ~5 mins 
-## A list of copy/paste-able commands (with short video walkthrough) to go from an Ubuntu 20.04 install on any IaaS provider to a basic yet beautiful website, all in about 5 mins.
-
-How to spin up a basic yet beautiful, responsive, easily extensible website (on AWS, Azure, GCP, Digital Ocean, etc.) on a Custom Hostname, delivered via HTTPS and with SFTP access - all almost FREE and all within ~5 mins!
+# Ubuntu 20.04 to Awesome Website in ~5 mins 
+## WHAT
+How to spin up a basic yet beautiful and extensible website on any IaaS (like AWS, Azure, GCP) with a custom hostname, HTTPS and SFTP - all almost FREE - and all within about 5 minutes!  Although the resulting website can definitely standalone, it's really intended to act as an origin for an Akamai Ion config which we'll be walking through setting up in a future post.
 
 ## WHY
-I had a need to be able to spin up a basic lowest common demoninator version of a hello world type website on a variety of PaaS providers including AWS, Azure, GCP and Digital Ocean to test and demo Akamai technologies for my customers.  Once I understood the process I thought it would be useful to share in case someone had the same need I did in a way that was as quick, easy, and elegant as I could.
+Akamai is incredible at deliverying and securing most of the world's most trafficked and targeted web applications but it's not always as great at making it as frictionless as it can for people to learn about, demo and experiment with Akamai solutions.
 
-## HOW
-This isn't a LAMP or LEMP or MERN stack, it's just NGINX, HTTPS, SFTP, and a basic yet gorgeous basic website of your choosing which only includes html, css, images.  From there it's up to you to extend it however you'd like by adding say PHP and mySQL and Wordpress if you'd like or whatever. 
+This is why I started HelloWorld.ByAkamai.com, to try to make it as easy as I can for anyone (like customers, fellow SEs, curious web devs, interviewees, etc.) to try out Akamai solutions.
+
+HelloWorld.ByAkamai.com will feature several How-To style trainings, all aimming to be ~5 minutes in length, and all building on eachother.  The intent with this approach is to support those who want to dive deeper into solutioning with Akamai vs. those that may only want to quickly get a clear understanding of a  specific solution without getting having to wade through information they don't want.
 
 ## PREREQUISITES
 
-1. AWS account (You'll have to put down a credit card, but free tier works)
-2. Custom hostname (I use Google Domains for this at $12/yr for the hostname)
-3. DNS resolver (I use Google Domains for this tool as part of what I already pay for but could be easily done with Edge DNS as well)
-4. Command line tool (I use iTerm 2 but Terminal or Putty work also)
+1. An IaaS account (like AWS, Azure, GCP, Digital Ocean, Linode, etc.)  
+  
+    - You'll most likely have to put down a credit card if your company can't get you an account to use.
+    
+    - Most have a free tier for prototyping which will work fine for most cases where there's minmal traffic.
+    
+    - I plan on posting a video walkthrough of opening an account, spinning up Ubuntu 20.04 and SSHing in for each of the IaaS providers mentioned above.
+
+    - I plan on reviewing the 5 IaaS providers above to compare their prototyping pricing tiers to see which is the cheapest.
+ 
+2. A custom hostname purchsased through a Registrar (like Google Domains, Go Daddy, NameCheap, etc.) or you could ask someone like me if I can set up a custom subdomain on a domain I own.
+
+3. A DNS resolver.  I beleive most Domain Registrars can act as a DNS resolver on your behalf.  I use domains.google.com as my registrar and they provide this service.  Akamai has a solution called Edge DNS that can do this job just as easily and potentially faster.
+
+4. A Command line tool (like Terminal if you're on a Mac like me or Putty if your on Windows), personally I prefer iTerm 2 which is free)
+
+5. (Optional) A Code Editor, I use Visual Studio Code which is free.
+
+6. (Optional) A SFTP GUI, I use Filezilla which is free.
 
 ## INSTRUCTIONS
 
-### 1. Setup Ubuntu 20.04 on an AWS EC2 micro instance
+### 1. Setup Ubuntu 20.04
 
-A. From within the AWS Console navigate to EC2 launch the instance
-
-B. Name the key "key" and download it as a .pem, set it's file permissions to 600 by running `chmod 644 key.pem` then SSH in using key.pem for authentication.
-
-C. Run...
+A. SSH in to Ubuntu 20.04 and run...
 ```
 sudo su
 apt update
 ```
 
-### 2. Setup Nginx on Ubuntu 20.04
+### 2. Setup Nginx
 
 A. Run...
 ```
@@ -45,7 +56,7 @@ curl -4 icanhazip.com
 ```
 ... then copy that IP and drop it into a browser.  You should see the Nginx Welcome page via HTTP (not HTTPS)
 
-### 3. Setup a Custom Domain
+### 3. Setup your Custom Domain
 
 A. Update the DNS of the custom hostname to include an A record pointing at the server's IP address.
 
