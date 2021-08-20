@@ -1,13 +1,17 @@
 # Ubuntu 20.04 to Awesome Website in ~5 mins 
 ## WHAT
-How to spin up a basic yet beautiful and extensible website on any IaaS (like AWS, Azure, GCP) with a custom hostname, HTTPS and SFTP - all almost FREE - and all within about 5 minutes!  Although the resulting website can definitely standalone, it's really intended to act as an origin for an Akamai Ion config which we'll be walking through setting up in a future post.
+How to spin up a basic yet beautiful and extensible website on any IaaS (like AWS, Azure, GCP) with a custom hostname, HTTPS, and SFTP, all nearly free and all within about 5 minutes!  
+
+And although the resulting website can definitely stand on it's own, it's really intended to act as an origin for an Akamai CDN config which we'll be walking through setting up in a future post.
 
 ## WHY
 Akamai is incredible at deliverying and securing most of the world's most trafficked and targeted web applications but it's not always as great at making it as frictionless as it can for people to learn about, demo and experiment with Akamai solutions.
 
 This is why I started HelloWorld.ByAkamai.com, to try to make it as easy as I can for anyone (like customers, fellow SEs, curious web devs, interviewees, etc.) to try out Akamai solutions.
 
-HelloWorld.ByAkamai.com will feature several How-To style trainings, all aimming to be ~5 minutes in length, and all building on eachother.  The intent with this approach is to support those who want to dive deeper into solutioning with Akamai vs. those that may only want to quickly get a clear understanding of a  specific solution without getting having to wade through information they don't want.
+HelloWorld.ByAkamai.com will feature several How-To style trainings, all aimming to be ~5 minutes in length, and all building on eachother.  The intent here is to support those who are looking to dive deeper into solutioning with Akamai vs. those that may only want a quick, clear understanding of a specific solution without getting having to wade through information they don't want.
+
+The purpose for this specific post is to walkthrough going from a linux install on an IaaS provider to hcing a fully functional, beautiful custom website ready to act as an origin for an Akamai config where various Akamai solutions can bolted on as desired.
 
 ## PREREQUISITES
 
@@ -27,9 +31,9 @@ HelloWorld.ByAkamai.com will feature several How-To style trainings, all aimming
 
 4. A Command line tool (like Terminal if you're on a Mac like me or Putty if your on Windows), personally I prefer iTerm 2 which is free)
 
-5. (Optional) A Code Editor, I use Visual Studio Code which is free.
+5. (Optional) A Code Editor, I use the free version of Visual Studio Code.
 
-6. (Optional) A SFTP GUI, I use Filezilla which is free.
+6. (Optional) A SFTP GUI, I use the free version of Filezilla.
 
 ## INSTRUCTIONS
 
